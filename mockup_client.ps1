@@ -4,7 +4,7 @@
 .DESCRIPTION 
     Sends an MHC preset UDP datagram to a server
 .NOTES 
-    File Name  : Send-UDPDatagram 
+    File Name  : mockup_client
     Author     : Rafał Michalski - royaltm75@gmail.com
     Requires   : PowerShell V2 CTP3
 .EXAMPLE 
