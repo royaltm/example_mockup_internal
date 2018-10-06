@@ -11,15 +11,23 @@ Compiling:
 Usage:
 
 ```
-$ cargo run 0.0.0.0:5000
+cargo run 0.0.0.0:5000
 
 Binding to: 0.0.0.0:5000
 ```
 
 Now throw some UDP packet at it:
 
+Unix (using netcat):
+
+```sh
+$ echo -en "\x15\x6\x1\x0\x63\x66" | nc -4u -w1 -p 50001 127.0.0.1 5000
 ```
-echo -en "\x15\x06\x01\x00\x10\x66" | nc -4u -w1 -p 50001 127.0.0.1 5000
+
+On Windows using (included) PowerShell script:
+
+```ps
+.\mockup_client.ps1 -preset 99 -ip 127.0.0.1 -port 5000 -srcport 50002
 ```
 
 You should see on mhc console:
