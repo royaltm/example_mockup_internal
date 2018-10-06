@@ -1,0 +1,9 @@
+[package]
+name = "mhc"
+version = "0.1.0"
+authors = ["Rafał Michalski <royaltm75@gmail.com>"]
+
+[dependencies]
+serde = "^1.0.63"
+serde_derive = "^1.0.27"
+bincode = "^1.0.1"
