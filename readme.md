@@ -33,5 +33,5 @@ On Windows using (included) PowerShell script:
 You should see on mhc console:
 
 ```
-Valid MHC packet from: 127.0.0.1:50001 data: MHCPacket { protocol_id: 21, size: 6, command_type: 1, head: 0, preset: 16, signature: 102 }
+Valid MHC packet from: 127.0.0.1:50001 data: MHCPacket { protocol_id: 21, size: 6, command_type: 1, head: 0, preset: 99, signature: 102 }
 ```
