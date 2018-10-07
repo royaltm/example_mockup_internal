@@ -69,7 +69,7 @@ fn main() -> io::Result<()> {
         match socket.recv_from(&mut buf) {
             Ok((MHC_PACKET_SIZE, src)) => { /* the expected size is correct */
                 /* this operation is a formality, a no-op behind the scenes when optimized */
-                let mhc_packet: MHCPacket = deserialize(&buf[..6])
+                let mhc_packet: MHCPacket = deserialize(&buf[..MHC_PACKET_SIZE])
                                             .map_err(|e| io::Error::new(io::ErrorKind::Other, e))?;
                 match mhc_packet.validate() {
                     Ok(_) => {
